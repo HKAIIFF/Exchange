@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIF Exchange - World's First AI-Native Film Asset Exchange</title>
+    <title>AIF Network - AI-Native Film Asset & Computing Power Network</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,14 +97,12 @@
         .hamburger-active .line2 { opacity: 0; }
         .hamburger-active .line3 { transform: rotate(-45deg) translate(5px, -5px); }
 
-        /* --- New Styles from token2.html for Modal --- */
-        /* Compliance Modal Overlay */
+        /* --- Compliance Modal Styles --- */
         .compliance-overlay {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(8px);
         }
 
-        /* Custom Checkbox */
         .custom-checkbox {
             appearance: none;
             background-color: #fff;
@@ -138,10 +136,9 @@
     </style>
 </head>
 
-<!-- Added overflow-hidden to initial body state -->
 <body data-lang="en" class="bg-white text-black selection:bg-black selection:text-white overflow-hidden">
 
-    <!-- Compliance Modal (Copied from token2.html) -->
+    <!-- Compliance Modal (Mandatory per Guidelines 2.2) -->
     <div id="complianceModal" class="fixed inset-0 z-[100] compliance-overlay flex items-center justify-center p-4">
         <div class="bg-white border border-black shadow-2xl rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto flex flex-col relative">
             
@@ -149,7 +146,6 @@
             <div class="absolute top-6 right-6 z-10">
                 <button onclick="toggleLanguage()" class="text-xs font-mono border border-gray-200 px-3 py-1.5 rounded-full hover:bg-black hover:text-white transition-all uppercase flex items-center gap-2">
                     <i class="fas fa-globe"></i>
-                    <!-- Adapted to use exchange.html's data-lang visibility logic -->
                     <span class="lang-en">EN</span><span class="lang-zh">繁體</span>
                 </button>
             </div>
@@ -183,6 +179,7 @@
                         <span class="lang-en">Please Confirm:</span>
                     </p>
                     
+                    <!-- Compliance Checklist (Matches Guideline 2.2) -->
                     <label class="flex items-start gap-3 cursor-pointer group">
                         <input type="checkbox" class="custom-checkbox mt-0.5 compliance-check">
                         <span class="text-sm group-hover:text-black text-gray-600 transition-colors">
@@ -210,16 +207,16 @@
                     <label class="flex items-start gap-3 cursor-pointer group">
                         <input type="checkbox" class="custom-checkbox mt-0.5 compliance-check">
                         <span class="text-sm group-hover:text-black text-gray-600 transition-colors">
-                            <span class="lang-zh">本人知悉數字資產投資風險</span>
-                            <span class="lang-en">I am aware of the risks involved in digital asset investment</span>
+                            <span class="lang-zh">本人知悉數字資產風險（價格波動及本金損失風險）</span>
+                            <span class="lang-en">I am aware of the risks (volatility and potential loss of principal)</span>
                         </span>
                     </label>
 
                     <label class="flex items-start gap-3 cursor-pointer group">
                         <input type="checkbox" class="custom-checkbox mt-0.5 compliance-check">
                         <span class="text-sm group-hover:text-black text-gray-600 transition-colors">
-                            <span class="lang-zh">本人自願承擔全部投資風險</span>
-                            <span class="lang-en">I voluntarily assume all investment risks</span>
+                            <span class="lang-zh">本人自願承擔全部風險</span>
+                            <span class="lang-en">I voluntarily assume all risks</span>
                         </span>
                     </label>
                 </div>
@@ -240,29 +237,25 @@
     </div>
 
     <!-- Navigation -->
-    <!-- Removed bg-white/95 and backdrop-blur-sm from here to fix fixed positioning bug -->
     <nav class="fixed top-0 w-full z-50 transition-all duration-300">
-        
-        <!-- Separated Background Layer: This preserves the blur effect without trapping the fixed mobile menu -->
         <div class="absolute inset-0 bg-white/95 backdrop-blur-sm border-b border-gray-200"></div>
 
-        <!-- Added relative and z-50 here to ensure header content stays above the mobile menu -->
         <div class="relative z-50 px-6 md:px-8 py-4 flex justify-between items-center max-w-[1920px] mx-auto">
             <a href="#" class="flex items-center gap-4 group z-50">
                 <div class="flex flex-col leading-tight">
-                    <span class="text-lg font-bold tracking-tight">AIF EXCHANGE.</span>
+                    <span class="text-lg font-bold tracking-tight">AIF NETWORK.</span>
                     <span class="text-[0.6rem] font-mono uppercase tracking-wider text-gray-500 group-hover:text-black transition-colors">
-                        <span class="lang-en">Digital Asset Exchange</span>
-                        <span class="lang-zh">數字資產交易所</span>
+                        <span class="lang-en">Digital Asset Network</span>
+                        <span class="lang-zh">數字資產價值網絡</span>
                     </span>
                 </div>
             </a>
             
             <!-- Desktop Menu -->
             <div class="hidden xl:flex items-center gap-1 text-[13px] font-medium tracking-wide">
-                <a href="#trading" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Trading</span><span class="lang-zh">交易</span></a>
+                <a href="#trading" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Exchange</span><span class="lang-zh">交易</span></a>
                 <a href="#features" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Features</span><span class="lang-zh">功能</span></a>
-                <a href="#tokens" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Tokens</span><span class="lang-zh">代幣</span></a>
+                <a href="#tokens" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Tokens</span><span class="lang-zh">通證</span></a>
                 <a href="#roadmap" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Roadmap</span><span class="lang-zh">路線圖</span></a>
                 <a href="#ecosystem" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Ecosystem</span><span class="lang-zh">生態系統</span></a>
                 <a href="#whitepaper" class="px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"><span class="lang-en">Whitepaper</span><span class="lang-zh">白皮書</span></a>
@@ -274,7 +267,7 @@
                 </button>
                 
                 <a href="#register" class="hidden md:flex bg-black text-white text-[13px] font-medium px-6 py-3 rounded-full academy-btn items-center gap-2">
-                    <span class="lang-en">Start Trading</span><span class="lang-zh">開始交易</span>
+                    <span class="lang-en">Access Network</span><span class="lang-zh">接入網絡</span>
                 </a>
                 
                 <a href="#login" class="hidden md:flex border border-gray-200 text-black text-[13px] font-medium px-6 py-3 rounded-full academy-btn hover:bg-gray-50 items-center gap-2">
@@ -293,16 +286,16 @@
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="fixed inset-0 bg-white z-40 pt-24 px-6 pb-6 flex flex-col xl:hidden overflow-y-auto">
             <div class="flex flex-col gap-4 text-xl font-medium">
-                <a href="#trading" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Trading</span><span class="lang-zh">交易</span></a>
+                <a href="#trading" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Exchange</span><span class="lang-zh">交易</span></a>
                 <a href="#features" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Features</span><span class="lang-zh">功能</span></a>
-                <a href="#tokens" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Tokens</span><span class="lang-zh">代幣</span></a>
+                <a href="#tokens" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Tokens</span><span class="lang-zh">通證</span></a>
                 <a href="#roadmap" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Roadmap</span><span class="lang-zh">路線圖</span></a>
                 <a href="#ecosystem" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Ecosystem</span><span class="lang-zh">生態系統</span></a>
                 <a href="#whitepaper" class="py-3 border-b border-gray-100" onclick="closeMenu()"><span class="lang-en">Whitepaper</span><span class="lang-zh">白皮書</span></a>
                 
                 <div class="mt-4 flex flex-col gap-3">
                     <a href="#register" class="bg-black text-white py-4 rounded-full text-center font-bold" onclick="closeMenu()">
-                        <span class="lang-en">Start Trading</span><span class="lang-zh">開始交易</span>
+                        <span class="lang-en">Access Network</span><span class="lang-zh">接入網絡</span>
                     </a>
                     <a href="#login" class="border border-gray-200 py-4 rounded-full text-center font-bold" onclick="closeMenu()">
                         <span class="lang-en">Login</span><span class="lang-zh">登入</span>
@@ -325,17 +318,18 @@
                 </div>
                 
                 <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-10 text-black">
-                    AIF <br> EXCHANGE
+                    AIF <br> NETWORK
                 </h1>
                 
                 <p class="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed font-light">
-                    <span class="lang-en">The World's First AI-Native Film Digital Asset Exchange.<br>Defining the financial infrastructure for the next-gen creative economy.</span>
-                    <span class="lang-zh">全球首個AI原生電影數字資產交易所。<br>為新一代創意經濟定義金融基礎設施。</span>
+                    <span class="lang-en">The World's First AI-Native Film Digital Asset Network.<br>Defining the financial infrastructure for the next-gen creative economy.</span>
+                    <!-- Optimized per Guideline 1.1: New Infrastructure Narrative -->
+                    <span class="lang-zh">全球首個AI原生影視工業的分布式算力結算與版權價值網絡。<br>構建Web3技術賦能的影視產業新基建。</span>
                 </p>
                 
                 <div class="flex flex-wrap gap-4 mt-8">
                      <a href="#trading" class="bg-black text-white text-sm font-medium px-8 py-4 rounded-full academy-btn flex items-center gap-2">
-                        <i class="fas fa-chart-line"></i> <span class="lang-en">Start Trading</span><span class="lang-zh">開始交易</span>
+                        <i class="fas fa-chart-line"></i> <span class="lang-en">Access Markets</span><span class="lang-zh">進入市場</span>
                     </a>
                     <a href="#whitepaper" class="border border-black text-black text-sm font-medium px-8 py-4 rounded-full academy-btn flex items-center gap-2 hover:bg-gray-50">
                         <i class="fas fa-book"></i> <span class="lang-en">Whitepaper</span><span class="lang-zh">查看白皮書</span>
@@ -348,31 +342,31 @@
                 <div class="grid grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-lg overflow-hidden">
                     <div class="bg-white p-6 hover:bg-gray-50 transition-colors">
                         <div class="flex items-center gap-2 mb-2 text-gray-400 text-xs font-mono uppercase">
-                            <i class="fas fa-chart-line"></i> <span class="lang-en">Price</span><span class="lang-zh">即時交易</span>
+                            <i class="fas fa-chart-line"></i> <span class="lang-en">Reference Price</span><span class="lang-zh">參考價值</span>
                         </div>
                         <span class="block text-3xl font-bold mb-1">$125.67</span>
                         <span class="text-[10px] font-mono text-green-600 font-bold">+12.34% 24h</span>
                     </div>
                     <div class="bg-white p-6 hover:bg-gray-50 transition-colors">
                         <div class="flex items-center gap-2 mb-2 text-gray-400 text-xs font-mono uppercase">
-                            <i class="fas fa-coins"></i> <span class="lang-en">Supply</span><span class="lang-zh">總代幣數量</span>
+                            <i class="fas fa-coins"></i> <span class="lang-en">Supply</span><span class="lang-zh">總發行量</span>
                         </div>
                         <span class="block text-3xl font-bold mb-1">10B</span>
-                        <span class="text-[10px] font-mono text-gray-400"><span class="lang-en">Total AIF</span><span class="lang-zh">AIF 總供應量</span></span>
+                        <span class="text-[10px] font-mono text-gray-400"><span class="lang-en">Total AIF</span><span class="lang-zh">AIF 算力通證總量</span></span>
                     </div>
                     <div class="bg-white p-6 hover:bg-gray-50 transition-colors">
                         <div class="flex items-center gap-2 mb-2 text-gray-400 text-xs font-mono uppercase">
-                            <i class="fas fa-users"></i> <span class="lang-en">Users</span><span class="lang-zh">註冊用戶</span>
+                            <i class="fas fa-users"></i> <span class="lang-en">Participants</span><span class="lang-zh">生態參與者</span>
                         </div>
                         <span class="block text-3xl font-bold mb-1">50K+</span>
-                        <span class="text-[10px] font-mono text-gray-400"><span class="lang-en">Active Global</span><span class="lang-zh">全球活躍用戶</span></span>
+                        <span class="text-[10px] font-mono text-gray-400"><span class="lang-en">Active Global</span><span class="lang-zh">全球活躍節點</span></span>
                     </div>
                     <div class="bg-white p-6 hover:bg-gray-50 transition-colors">
                         <div class="flex items-center gap-2 mb-2 text-gray-400 text-xs font-mono uppercase">
                             <i class="fas fa-film"></i> <span class="lang-en">Projects</span><span class="lang-zh">電影項目</span>
                         </div>
                         <span class="block text-3xl font-bold mb-1">247</span>
-                        <span class="text-[10px] font-mono text-gray-400"><span class="lang-en">Listed</span><span class="lang-zh">已上線項目</span></span>
+                        <span class="text-[10px] font-mono text-gray-400"><span class="lang-en">Empowered</span><span class="lang-zh">已賦能項目</span></span>
                     </div>
                 </div>
             </div>
@@ -382,9 +376,9 @@
     <!-- Marquee Section -->
     <div class="border-b border-gray-200 py-6 overflow-hidden bg-gray-50">
         <div class="whitespace-nowrap animate-marquee flex items-center gap-12 opacity-80 text-xs font-mono font-medium uppercase tracking-widest text-black">
-            <span>Spot Trading</span> <span>✦</span> <span>Derivatives</span> <span>✦</span> <span>ITO Platform</span> <span>✦</span> <span>NFT Marketplace</span> <span>✦</span> <span>AI Analytics</span> <span>✦</span>
-            <span>現貨交易</span> <span>✦</span> <span>衍生品交易</span> <span>✦</span> <span>ITO 平台</span> <span>✦</span> <span>NFT 市場</span> <span>✦</span> <span>AI 分析</span> <span>✦</span>
-            <span>Spot Trading</span> <span>✦</span> <span>Derivatives</span> <span>✦</span> <span>ITO Platform</span> <span>✦</span> <span>NFT Marketplace</span> <span>✦</span> <span>AI Analytics</span> <span>✦</span>
+            <span>Spot Trading</span> <span>✦</span> <span>Risk Management</span> <span>✦</span> <span>ITO Platform</span> <span>✦</span> <span>NFT Marketplace</span> <span>✦</span> <span>AI Analytics</span> <span>✦</span>
+            <span>現貨交易</span> <span>✦</span> <span>風險管理工具</span> <span>✦</span> <span>ITO 平台</span> <span>✦</span> <span>NFT 市場</span> <span>✦</span> <span>AI 數據分析</span> <span>✦</span>
+            <span>Spot Trading</span> <span>✦</span> <span>Risk Management</span> <span>✦</span> <span>ITO Platform</span> <span>✦</span> <span>NFT Marketplace</span> <span>✦</span> <span>AI Analytics</span> <span>✦</span>
         </div>
     </div>
 
@@ -392,7 +386,7 @@
     <section id="trading" class="py-24 px-6 md:px-8 max-w-[1920px] mx-auto border-b border-gray-200">
         <div class="flex justify-between items-end mb-12 reveal-text">
             <h2 class="text-3xl font-bold tracking-tight">
-                <span class="lang-en">Core Trading Features</span><span class="lang-zh">核心交易功能</span>
+                <span class="lang-en">Core Network Features</span><span class="lang-zh">核心網絡功能</span>
             </h2>
             <span class="text-xs font-mono text-gray-400 hidden md:inline-block">Designed for AI-Native Cinema</span>
         </div>
@@ -404,16 +398,16 @@
                     <i class="fas fa-exchange-alt"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-600 transition-colors">
-                    <span class="lang-en">Spot Trading System</span><span class="lang-zh">現貨交易系統</span>
+                    <span class="lang-en">Asset Exchange System</span><span class="lang-zh">資產交換系統</span>
                 </h3>
                 <p class="text-sm text-gray-500 leading-relaxed mb-6">
-                    <span class="lang-en">Support for AIF platform tokens, FilmTokens, and creative asset NFT trading.</span>
-                    <span class="lang-zh">支援AIF平台代幣、電影專屬代幣(FilmToken)及創意資產NFT交易。</span>
+                    <span class="lang-en">Support for AIF computing credits, FilmTokens, and creative asset NFT exchange.</span>
+                    <span class="lang-zh">支援AIF算力通證、電影權益通證(FilmToken)及創意資產NFT的交換與流轉。</span>
                 </p>
                 <ul class="space-y-3 text-xs font-mono text-gray-500 border-t border-gray-100 pt-6">
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">AIF/USDT, AIF/HKD Pairs</span><span class="lang-zh">AIF/USDT、AIF/HKD交易對</span></li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Film Token Trading</span><span class="lang-zh">電影專屬代幣交易</span></li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Creative Asset NFT Market</span><span class="lang-zh">創意資產NFT市場</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">AIF/USDT Pairs</span><span class="lang-zh">AIF/USDT 兌換</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Film Token Market</span><span class="lang-zh">電影權益通證市場</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Copyright Asset Market</span><span class="lang-zh">數字版權資產市場</span></li>
                 </ul>
             </div>
 
@@ -423,34 +417,34 @@
                     <i class="fas fa-rocket"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-600 transition-colors">
-                    <span class="lang-en">Initial Token Offering (ITO)</span><span class="lang-zh">初始代幣發行(ITO)</span>
+                    <span class="lang-en">Initial Token Offering (ITO)</span><span class="lang-zh">權益通證發行(ITO)</span>
                 </h3>
                 <p class="text-sm text-gray-500 leading-relaxed mb-6">
                     <span class="lang-en">Incubation services for premium AI film projects before token issuance.</span>
-                    <span class="lang-zh">為優質AI電影項目提供代幣發行前的孵化服務。</span>
+                    <span class="lang-zh">為優質AI電影項目提供版權資產數字化與發行孵化服務。</span>
                 </p>
                 <ul class="space-y-3 text-xs font-mono text-gray-500 border-t border-gray-100 pt-6">
                     <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Project Incubation</span><span class="lang-zh">項目孵化服務</span></li>
                     <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Compliant Issuance</span><span class="lang-zh">合規發行流程</span></li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Investor Protection</span><span class="lang-zh">投資者保護制度</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Copyright Protection</span><span class="lang-zh">版權保護制度</span></li>
                 </ul>
             </div>
 
-            <!-- Derivatives -->
+            <!-- Derivatives (Renamed to Risk Management for Compliance) -->
             <div class="group bg-white border border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-black/10 transition-all duration-500 reveal-text delay-200">
                 <div class="text-4xl mb-6 text-black group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-chart-bar"></i>
+                    <i class="fas fa-shield-virus"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-600 transition-colors">
-                    <span class="lang-en">Derivatives Trading</span><span class="lang-zh">衍生品交易</span>
+                    <span class="lang-en">Risk Management</span><span class="lang-zh">版權金融工具</span>
                 </h3>
                 <p class="text-sm text-gray-500 leading-relaxed mb-6">
-                    <span class="lang-en">Futures, options, and other derivative products for different risk appetites.</span>
-                    <span class="lang-zh">提供期貨、期權等衍生品，滿足不同風險偏好。</span>
+                    <span class="lang-en">Hedging tools and derivative products for professional asset management.</span>
+                    <span class="lang-zh">提供版權收益權管理工具與風險對沖機制，服務專業機構。</span>
                 </p>
                 <ul class="space-y-3 text-xs font-mono text-gray-500 border-t border-gray-100 pt-6">
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Futures Contracts</span><span class="lang-zh">期貨合約交易</span></li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Yield Options</span><span class="lang-zh">收益權期權產品</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Hedging Contracts</span><span class="lang-zh">風險對沖合約</span></li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">Yield Management</span><span class="lang-zh">版權收益管理</span></li>
                     <li class="flex items-center gap-2"><i class="fas fa-check text-black"></i> <span class="lang-en">AI Film Index</span><span class="lang-zh">AI電影產業指數</span></li>
                 </ul>
             </div>
@@ -462,11 +456,12 @@
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-gray-200 pb-8 reveal-text">
             <div>
                 <h2 class="text-4xl font-bold mb-4">
-                    <span class="lang-en">AIF Tokenomics</span><span class="lang-zh">AIF 代幣經濟學</span>
+                    <span class="lang-en">AIF Tokenomics</span><span class="lang-zh">AIF 通證經濟模型</span>
                 </h2>
                 <p class="text-gray-500">
+                    <!-- Optimized Definition per Guideline 1.2 -->
                     <span class="lang-en">Platform Native Token, Total Supply 10 Billion</span>
-                    <span class="lang-zh">AIF Exchange平台原生代幣，總供應量100億枚</span>
+                    <span class="lang-zh">AI影視算力能源憑證，總供應量100億枚</span>
                 </p>
             </div>
             <div class="text-right mt-6 md:mt-0">
@@ -480,25 +475,25 @@
         <!-- Token Info Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-px bg-gray-200 border border-gray-200 rounded-lg overflow-hidden mb-16 reveal-text">
             <div class="bg-white p-8">
-                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Symbol</span><span class="lang-zh">代幣符號</span></span>
+                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Symbol</span><span class="lang-zh">通證符號</span></span>
                 <span class="text-2xl font-bold">AIF</span>
             </div>
             <div class="bg-white p-8">
-                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Standard</span><span class="lang-zh">代幣標準</span></span>
+                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Standard</span><span class="lang-zh">技術標準</span></span>
                 <span class="text-2xl font-bold">SPL + Solana</span>
             </div>
             <div class="bg-white p-8">
-                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Mechanism</span><span class="lang-zh">通脹機制</span></span>
-                <span class="text-2xl font-bold"><span class="lang-en">Deflationary</span><span class="lang-zh">通縮銷毀</span></span>
+                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Mechanism</span><span class="lang-zh">經濟機制</span></span>
+                <span class="text-2xl font-bold"><span class="lang-en">Deflationary</span><span class="lang-zh">通縮 (消耗即銷毀)</span></span>
             </div>
              <div class="bg-white p-8">
-                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Utility</span><span class="lang-zh">用途</span></span>
-                <span class="text-2xl font-bold"><span class="lang-en">Gov & Fees</span><span class="lang-zh">治理與手續費</span></span>
+                <span class="text-xs font-mono text-gray-400 uppercase block mb-2"><span class="lang-en">Utility</span><span class="lang-zh">核心用途</span></span>
+                <span class="text-2xl font-bold"><span class="lang-en">Gov & Fees</span><span class="lang-zh">算力支付與治理</span></span>
             </div>
         </div>
 
         <!-- Distribution List -->
-        <h3 class="text-xl font-bold mb-8 reveal-text"><span class="lang-en">Token Distribution</span><span class="lang-zh">代幣分配方案</span></h3>
+        <h3 class="text-xl font-bold mb-8 reveal-text"><span class="lang-en">Token Distribution</span><span class="lang-zh">通證分配方案</span></h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-text mb-16">
             <div class="border-l-2 border-black pl-6 py-2">
                 <div class="text-3xl font-bold mb-1">30%</div>
@@ -510,9 +505,10 @@
                 <h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-gray-600"><span class="lang-en">Team & Advisors</span><span class="lang-zh">團隊和顧問</span></h4>
                 <p class="text-xs text-gray-400 font-mono">2,000,000,000 AIF</p>
             </div>
+            <!-- Changed "Investors" to "Strategic Partners" per Guideline 2.1 (No fundraising claims) -->
             <div class="border-l-2 border-gray-300 pl-6 py-2">
                 <div class="text-3xl font-bold mb-1 text-gray-600">20%</div>
-                <h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-gray-600"><span class="lang-en">Investors</span><span class="lang-zh">投資者</span></h4>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-gray-600"><span class="lang-en">Strategic Partners</span><span class="lang-zh">戰略合作夥伴</span></h4>
                 <p class="text-xs text-gray-400 font-mono">2,000,000,000 AIF</p>
             </div>
             <div class="border-l-2 border-gray-300 pl-6 py-2">
@@ -522,56 +518,48 @@
             </div>
             <div class="border-l-2 border-gray-300 pl-6 py-2">
                 <div class="text-3xl font-bold mb-1 text-gray-600">10%</div>
-                <h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-gray-600"><span class="lang-en">Liquidity</span><span class="lang-zh">流動性提供</span></h4>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-gray-600"><span class="lang-en">Liquidity</span><span class="lang-zh">流動性支持</span></h4>
                 <p class="text-xs text-gray-400 font-mono">1,000,000,000 AIF</p>
             </div>
             <div class="border-l-2 border-gray-300 pl-6 py-2">
                 <div class="text-3xl font-bold mb-1 text-gray-600">5%</div>
-                <h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-gray-600"><span class="lang-en">Marketing</span><span class="lang-zh">營銷推廣</span></h4>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-gray-600"><span class="lang-en">Marketing</span><span class="lang-zh">品牌建設</span></h4>
                 <p class="text-xs text-gray-400 font-mono">500,000,000 AIF</p>
             </div>
         </div>
 
-        <!-- Token Utilities (Added back for completeness) -->
+        <!-- Token Utilities -->
         <div class="reveal-text">
-            <h3 class="text-xl font-bold mb-8"><span class="lang-en">Token Utility</span><span class="lang-zh">AIF 代幣功能</span></h3>
+            <h3 class="text-xl font-bold mb-8"><span class="lang-en">Token Utility</span><span class="lang-zh">AIF 通證功能</span></h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="border border-gray-200 p-8 rounded-lg">
                     <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
-                        <i class="fas fa-percentage"></i> <span class="lang-en">Fee Discounts</span><span class="lang-zh">交易費用支付</span>
+                        <i class="fas fa-gas-pump"></i> <span class="lang-en">Compute Gas</span><span class="lang-zh">算力支付 (Gas)</span>
                     </h4>
                     <ul class="space-y-3 text-sm text-gray-600">
                         <li class="flex items-start gap-2">
                             <span class="mt-1.5 w-1 h-1 bg-black rounded-full"></span>
-                            <span><span class="lang-en">20-50% discount when paying fees with AIF.</span><span class="lang-zh">使用AIF支付手續費享受20-50%折扣。</span></span>
+                            <span><span class="lang-en">Essential fuel for AI video generation.</span><span class="lang-zh">AI視頻生成的必要燃料（工业原料）。</span></span>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="mt-1.5 w-1 h-1 bg-black rounded-full"></span>
-                            <span><span class="lang-en">Tiered discount mechanism based on holdings.</span><span class="lang-zh">階梯式折扣機制，持有量越多折扣越大。</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="mt-1.5 w-1 h-1 bg-black rounded-full"></span>
-                            <span><span class="lang-en">VIP membership system based on AIF holdings.</span><span class="lang-zh">基於AIF持有量和交易量的VIP會員體系。</span></span>
+                            <span><span class="lang-en">Burned upon usage (Deflationary).</span><span class="lang-zh">使用即銷毀，持續通縮。</span></span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="border border-gray-200 p-8 rounded-lg">
                     <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
-                        <i class="fas fa-vote-yea"></i> <span class="lang-en">Governance Rights</span><span class="lang-zh">治理權利</span>
+                        <i class="fas fa-vote-yea"></i> <span class="lang-en">Governance Rights</span><span class="lang-zh">生態治理權</span>
                     </h4>
                     <ul class="space-y-3 text-sm text-gray-600">
                         <li class="flex items-start gap-2">
                             <span class="mt-1.5 w-1 h-1 bg-black rounded-full"></span>
-                            <span><span class="lang-en">Vote on major exchange decisions.</span><span class="lang-zh">參與交易所重大決策投票。</span></span>
+                            <span><span class="lang-en">Vote on major network decisions.</span><span class="lang-zh">參與網絡重大決策投票。</span></span>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="mt-1.5 w-1 h-1 bg-black rounded-full"></span>
-                            <span><span class="lang-en">Voting rights for new token listings.</span><span class="lang-zh">新幣種上幣投票權。</span></span>
-                        </li>
-                         <li class="flex items-start gap-2">
-                            <span class="mt-1.5 w-1 h-1 bg-black rounded-full"></span>
-                            <span><span class="lang-en">Participate in development direction decisions.</span><span class="lang-zh">交易所發展方向決策參與權。</span></span>
+                            <span><span class="lang-en">Voting rights for new project incubation.</span><span class="lang-zh">新項目孵化投票權。</span></span>
                         </li>
                     </ul>
                 </div>
@@ -592,13 +580,13 @@
             <div class="md:col-span-8">
                 <p class="text-xl font-light text-gray-600 mb-12 reveal-text">
                     <span class="lang-en">High-performance trading system based on the latest blockchain technology, ensuring security and speed.</span>
-                    <span class="lang-zh">基於最新區塊鏈技術的高性能交易系統，確保安全與速度。</span>
+                    <span class="lang-zh">基於最新區塊鏈技術的高性能價值交換系統，確保資產安全與結算速度。</span>
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-text">
                     <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
                         <div class="text-3xl mb-4"><i class="fas fa-tachometer-alt"></i></div>
-                        <h4 class="font-bold mb-2"><span class="lang-en">High Performance Engine</span><span class="lang-zh">高性能交易引擎</span></h4>
+                        <h4 class="font-bold mb-2"><span class="lang-en">High Performance Engine</span><span class="lang-zh">高性能結算引擎</span></h4>
                         <p class="text-sm text-gray-600 mb-4">
                             <span class="lang-en">Matching speed < 1ms, 1,000,000 TPS, Microservices architecture.</span>
                             <span class="lang-zh">撮合速度低於1毫秒，支持100萬TPS，微服務架構。</span>
@@ -651,7 +639,7 @@
                 </h2>
                 <p class="text-gray-500">
                     <span class="lang-en">From foundation to global expansion</span>
-                    <span class="lang-zh">從基礎平台建設到全球擴張的完整發展計劃</span>
+                    <span class="lang-zh">從基礎平台建設到全球生態擴張</span>
                 </p>
             </div>
             
@@ -662,15 +650,11 @@
                     <div class="flex items-center mb-2">
                         <h4 class="text-xs font-bold uppercase tracking-widest text-black mr-4">2025 Q4</h4>
                     </div>
-                    <h3 class="text-xl font-bold mb-2"><span class="lang-en">Platform Foundation</span><span class="lang-zh">基礎平台建設</span></h3>
+                    <h3 class="text-xl font-bold mb-2"><span class="lang-en">Platform Foundation</span><span class="lang-zh">基礎設施建設</span></h3>
                     <p class="text-sm text-gray-600 mb-3">
                         <span class="lang-en">Core trading engine development, KYC system, wallet management, security framework.</span>
-                        <span class="lang-zh">核心交易引擎開發、用戶管理和KYC系統、錢包和資產管理系統、安全框架部署。</span>
+                        <span class="lang-zh">核心結算引擎開發、用戶合規(KYC)系統、錢包資產管理系統、安全框架部署。</span>
                     </p>
-                    <div class="flex gap-2">
-                         <span class="bg-gray-200 text-black text-[10px] px-2 py-1 rounded font-mono uppercase">Dev</span>
-                         <span class="bg-gray-200 text-black text-[10px] px-2 py-1 rounded font-mono uppercase">Compliance</span>
-                    </div>
                 </div>
 
                 <!-- 2026 Q1-Q2 -->
@@ -682,7 +666,7 @@
                     <h3 class="text-xl font-bold mb-2"><span class="lang-en">Core Launch</span><span class="lang-zh">核心功能上線</span></h3>
                     <p class="text-sm text-gray-600 mb-3">
                         <span class="lang-en">Spot trading live, market making, first batch of film token issuance.</span>
-                        <span class="lang-zh">AIF現貨交易正式上線、基礎訂單類型、做市商對接、首批電影項目代幣發行。</span>
+                        <span class="lang-zh">AIF現貨市場上線、流動性對接、首批電影版權項目通證發行。</span>
                     </p>
                 </div>
 
@@ -692,10 +676,10 @@
                      <div class="flex items-center mb-2">
                          <h4 class="text-xs font-bold uppercase tracking-widest text-gray-500 mr-4">2026 Q3-Q4</h4>
                     </div>
-                    <h3 class="text-xl font-bold mb-2"><span class="lang-en">Expansion</span><span class="lang-zh">功能擴展</span></h3>
+                    <h3 class="text-xl font-bold mb-2"><span class="lang-en">Expansion</span><span class="lang-zh">生態擴展</span></h3>
                     <p class="text-sm text-gray-600 mb-3">
                         <span class="lang-en">Margin trading, futures & options, cross-chain bridge, ecosystem integration.</span>
-                        <span class="lang-zh">槓桿交易和保證金系統、期貨和期權產品上線、跨鏈交易、與電影節生態深度整合。</span>
+                        <span class="lang-zh">版權金融工具上線、跨鏈橋接、與電影節生態深度整合。</span>
                     </p>
                 </div>
 
@@ -708,7 +692,7 @@
                     <h3 class="text-xl font-bold mb-2"><span class="lang-en">Industry Leadership</span><span class="lang-zh">行業領導地位</span></h3>
                     <p class="text-sm text-gray-600">
                         <span class="lang-en">Global standard setter for AI-native content financialization. IPO preparation.</span>
-                        <span class="lang-zh">成為全球AI原生內容金融化的標準制定者。IPO準備，全球領導。</span>
+                        <span class="lang-zh">成為全球AI原生內容資產化的標準制定者。IPO準備。</span>
                     </p>
                 </div>
             </div>
@@ -724,7 +708,7 @@
                 </h2>
                 <p class="text-xl text-gray-500 font-light">
                     <span class="lang-en">Deep integration with HKAIIFF, providing complete financial solutions for the AI-native film industry.</span>
-                    <span class="lang-zh">深度整合香港AI國際電影節生態系統，為AI原生電影產業提供完整的金融解決方案。</span>
+                    <span class="lang-zh">深度整合香港AI國際電影節生態系統，為AI原生電影產業提供完整的版權資產解決方案。</span>
                 </p>
             </div>
         </div>
@@ -732,10 +716,10 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-text">
             <div class="p-6 bg-white border border-gray-200 rounded-lg hover:bg-black hover:text-white transition-all duration-300 group">
                 <div class="text-3xl mb-4"><i class="fas fa-crown"></i></div>
-                <h4 class="font-bold mb-2"><span class="lang-en">Priority Listing</span><span class="lang-zh">獲獎作品優先上幣</span></h4>
+                <h4 class="font-bold mb-2"><span class="lang-en">Priority Listing</span><span class="lang-zh">獲獎作品優先通道</span></h4>
                 <p class="text-sm text-gray-500 group-hover:text-gray-300">
                     <span class="lang-en">Award-winning works get green channel for token issuance.</span>
-                    <span class="lang-zh">電影節獲獎作品自動獲得代幣發行綠色通道。</span>
+                    <span class="lang-zh">電影節獲獎作品自動獲得資產發行綠色通道。</span>
                 </p>
             </div>
             <div class="p-6 bg-white border border-gray-200 rounded-lg hover:bg-black hover:text-white transition-all duration-300 group">
@@ -765,11 +749,17 @@
         </div>
     </section>
 
-    <!-- Financials -->
+    <!-- Financials / Growth Scale (Compliance: Changed from "Financial Projections" to avoid profit promise) -->
     <section class="py-24 px-6 md:px-8 max-w-[1920px] mx-auto bg-gray-50 border-t border-gray-200">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4"><span class="lang-en">Financial Projections</span><span class="lang-zh">財務預測</span></h2>
-            <p class="text-gray-500"><span class="lang-en">Targeting $260M Revenue in 5 Years</span><span class="lang-zh">預計5年內實現2.6億美元收入</span></p>
+            <h2 class="text-3xl font-bold mb-4">
+                <span class="lang-en">Ecosystem Growth Scale</span>
+                <span class="lang-zh">生態系統交易規模預測</span>
+            </h2>
+            <p class="text-gray-500">
+                <span class="lang-en">Projected Total Network Volume</span>
+                <span class="lang-zh">預計全網算力流轉總規模</span>
+            </p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto mb-16 text-center">
@@ -780,23 +770,27 @@
             <div class="p-4 bg-white border border-gray-200 rounded-lg">
                 <div class="text-xs text-gray-400 mb-2">2026</div>
                 <div class="text-xl font-bold">$30M</div>
-                <div class="text-[10px] text-green-500">+329%</div>
+                <div class="text-[10px] text-green-500 font-mono"><span class="lang-en">Est. Vol</span><span class="lang-zh">預估流量</span></div>
             </div>
             <div class="p-4 bg-white border border-gray-200 rounded-lg">
                 <div class="text-xs text-gray-400 mb-2">2027</div>
                 <div class="text-xl font-bold">$70M</div>
-                <div class="text-[10px] text-green-500">+133%</div>
+                <div class="text-[10px] text-green-500 font-mono"><span class="lang-en">Est. Vol</span><span class="lang-zh">預估流量</span></div>
             </div>
             <div class="p-4 bg-white border border-gray-200 rounded-lg">
                 <div class="text-xs text-gray-400 mb-2">2028</div>
                 <div class="text-xl font-bold">$135M</div>
-                 <div class="text-[10px] text-green-500">+93%</div>
+                 <div class="text-[10px] text-green-500 font-mono"><span class="lang-en">Est. Vol</span><span class="lang-zh">預估流量</span></div>
             </div>
             <div class="p-4 bg-black text-white rounded-lg shadow-xl transform scale-105">
                 <div class="text-xs text-gray-400 mb-2">2029</div>
                 <div class="text-xl font-bold">$260M</div>
-                 <div class="text-[10px] text-green-400">+93%</div>
+                 <div class="text-[10px] text-green-400 font-mono"><span class="lang-en">Est. Vol</span><span class="lang-zh">預估流量</span></div>
             </div>
+        </div>
+        <div class="text-center text-[10px] text-gray-400 max-w-2xl mx-auto">
+            <span class="lang-en">* Note: These figures represent projected ecosystem transaction volume, not guaranteed returns.</span>
+            <span class="lang-zh">* 註：以上數據代表生態系統預計交易流轉規模，不代表任何形式的收益承諾。</span>
         </div>
     </section>
 
@@ -806,8 +800,8 @@
             <div class="bg-black text-white p-12 rounded-2xl reveal-text">
                 <h3 class="text-3xl font-bold mb-6"><span class="lang-en">Whitepaper</span><span class="lang-zh">白皮書</span></h3>
                 <p class="text-gray-400 mb-8 leading-relaxed">
-                    <span class="lang-en">Comprehensive introduction to the technical architecture, tokenomics, and business model of the world's first AI-native film asset exchange.</span>
-                    <span class="lang-zh">全面介紹全球首個AI原生電影數字資產交易所的技術創新、商業模式、代幣經濟學和發展路線圖。</span>
+                    <span class="lang-en">Comprehensive introduction to the technical architecture, tokenomics, and business model of the world's first AI-native film asset network.</span>
+                    <span class="lang-zh">全面介紹全球首個AI原生影視資產網絡的技術創新、商業模式、通證經濟學和發展路線圖。</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <button class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition">
@@ -850,7 +844,7 @@
         <div class="max-w-[1920px] mx-auto">
             <div class="flex flex-col items-center justify-center mb-24 text-center reveal-text">
                 <h2 class="text-[10vw] font-bold tracking-tighter leading-none mb-8">
-                    Start Trading.
+                    Start Creating.
                 </h2>
                 <div class="max-w-md w-full flex border-b border-white/30 pb-2 mb-8">
                     <input type="email" placeholder="Enter your email" class="bg-transparent border-none w-full text-white placeholder-gray-500 focus:ring-0 focus:outline-none">
@@ -860,18 +854,18 @@
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-white/20 pt-12">
                 <div class="col-span-1 md:col-span-2">
-                    <a href="#" class="text-2xl font-bold block mb-4">AIF EXCHANGE.</a>
+                    <a href="#" class="text-2xl font-bold block mb-4">AIF NETWORK.</a>
                     <p class="text-gray-400 text-sm max-w-xs leading-relaxed">
-                        <span class="lang-en">The world's first AI-native film industry digital asset exchange, providing professional financial infrastructure for the creative economy.</span>
-                        <span class="lang-zh">全球首個專注於AI原生電影產業的數字資產交易所，為創意經濟提供專業的金融基礎設施。</span>
+                        <span class="lang-en">The world's first AI-native film industry digital asset network, providing professional financial infrastructure for the creative economy.</span>
+                        <span class="lang-zh">全球首個專注於AI原生電影產業的數字資產網絡，為創意經濟提供專業的金融基礎設施。</span>
                     </p>
                 </div>
                 
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">Platform</h4>
                     <ul class="space-y-3 text-sm font-medium text-gray-300">
-                        <li><a href="#trading" class="hover:text-white">Spot Trading</a></li>
-                        <li><a href="#" class="hover:text-white">Derivatives</a></li>
+                        <li><a href="#trading" class="hover:text-white">Exchange</a></li>
+                        <li><a href="#" class="hover:text-white">Risk Mgmt</a></li>
                         <li><a href="#" class="hover:text-white">ITO Platform</a></li>
                         <li><a href="#" class="hover:text-white">Fees</a></li>
                     </ul>
@@ -889,7 +883,7 @@
             </div>
             
             <div class="mt-20 flex justify-between items-end text-[10px] uppercase text-gray-500 font-mono">
-                <p>&copy; 2026 AIF Exchange. All Rights Reserved.</p>
+                <p>&copy; 2026 AIF Network. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -970,7 +964,7 @@
             });
         });
 
-        // --- New Logic for Compliance Modal ---
+        // --- Compliance Modal Logic ---
         const complianceChecks = document.querySelectorAll('.compliance-check');
         const complianceBtn = document.getElementById('complianceBtn');
         const complianceModal = document.getElementById('complianceModal');
